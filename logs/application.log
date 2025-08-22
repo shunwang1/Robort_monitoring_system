@@ -1,0 +1,141 @@
+2025-07-07 11:10:18 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - Starting RobotDataHubApplicationTests using Java 23.0.2 with PID 23163 (started by shunwang in /Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub)
+2025-07-07 11:10:18 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-07-07 11:10:18 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-07-07 11:10:18 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-07-07 11:10:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:10:20 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 11:10:20 [main] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 1 subscriber(s).
+2025-07-07 11:10:20 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2025-07-07 11:10:20 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - Started RobotDataHubApplicationTests in 2.308 seconds (process running for 2.71)
+2025-07-07 11:10:21 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 11:10:21 [SpringApplicationShutdownHook] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 0 subscriber(s).
+2025-07-07 11:10:21 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2025-07-07 11:10:23 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - Starting RobotDataHubApplication using Java 23.0.2 with PID 23327 (/Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub/target/classes started by shunwang in /Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub)
+2025-07-07 11:10:23 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-07 11:10:23 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-07-07 11:10:23 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-07-07 11:10:23 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-07 11:10:23 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-07 11:10:23 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-07 11:10:23 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-07 11:10:23 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 468 ms
+2025-07-07 11:10:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:10:25 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 11:10:25 [main] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 1 subscriber(s).
+2025-07-07 11:10:25 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2025-07-07 11:10:25 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-07 11:10:25 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - Started RobotDataHubApplication in 2.22 seconds (process running for 2.449)
+2025-07-07 11:10:58 [pool-2-thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:11:00 [pool-2-thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:11:02 [pool-2-thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:13:47 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-07 11:13:52 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - Starting RobotDataHubApplicationTests using Java 23.0.2 with PID 30293 (started by shunwang in /Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub)
+2025-07-07 11:13:52 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-07-07 11:13:52 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-07-07 11:13:52 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-07-07 11:13:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:13:54 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 11:13:54 [main] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 1 subscriber(s).
+2025-07-07 11:13:54 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2025-07-07 11:13:54 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - Started RobotDataHubApplicationTests in 2.024 seconds (process running for 2.388)
+2025-07-07 11:13:55 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 11:13:55 [SpringApplicationShutdownHook] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 0 subscriber(s).
+2025-07-07 11:13:55 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2025-07-07 11:13:56 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - Starting RobotDataHubApplication using Java 23.0.2 with PID 30434 (/Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub/target/classes started by shunwang in /Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub)
+2025-07-07 11:13:56 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-07 11:13:56 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-07-07 11:13:56 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-07-07 11:13:56 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-07 11:13:56 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-07 11:13:56 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-07 11:13:56 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-07 11:13:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 391 ms
+2025-07-07 11:13:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:13:58 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 11:13:58 [main] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 1 subscriber(s).
+2025-07-07 11:13:58 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2025-07-07 11:13:58 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-07 11:13:58 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - Started RobotDataHubApplication in 2.018 seconds (process running for 2.206)
+2025-07-07 11:16:31 [pool-2-thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:16:33 [pool-2-thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:31:56 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-07 11:32:00 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - Starting RobotDataHubApplicationTests using Java 23.0.2 with PID 68208 (started by shunwang in /Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub)
+2025-07-07 11:32:00 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-07-07 11:32:00 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-07-07 11:32:00 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-07-07 11:32:00 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:32:00 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41e9f86
+2025-07-07 11:32:00 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-07 11:32:01 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 11:32:01 [main] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 1 subscriber(s).
+2025-07-07 11:32:01 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2025-07-07 11:32:01 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - Started RobotDataHubApplicationTests in 1.072 seconds (process running for 1.467)
+2025-07-07 11:32:02 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 11:32:02 [SpringApplicationShutdownHook] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 0 subscriber(s).
+2025-07-07 11:32:02 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2025-07-07 11:32:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-07 11:32:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-07 11:32:03 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - Starting RobotDataHubApplication using Java 23.0.2 with PID 68328 (/Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub/target/classes started by shunwang in /Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub)
+2025-07-07 11:32:03 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-07 11:32:03 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-07-07 11:32:03 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-07-07 11:32:03 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-07 11:32:03 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-07 11:32:03 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-07 11:32:03 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-07 11:32:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 390 ms
+2025-07-07 11:32:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 11:32:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5968800d
+2025-07-07 11:32:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-07 11:32:04 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 11:32:04 [main] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 1 subscriber(s).
+2025-07-07 11:32:04 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2025-07-07 11:32:04 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-07 11:32:04 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - Started RobotDataHubApplication in 1.015 seconds (process running for 1.2)
+2025-07-07 11:36:02 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-07 11:36:02 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-07 11:36:02 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-07-07 11:48:36 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-07 14:08:01 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - Starting RobotDataHubApplicationTests using Java 23.0.2 with PID 63334 (started by shunwang in /Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub)
+2025-07-07 14:08:01 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-07-07 14:08:02 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-07-07 14:08:02 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-07-07 14:08:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 14:08:03 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75eaba95
+2025-07-07 14:08:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-07 14:08:04 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 14:08:04 [main] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 1 subscriber(s).
+2025-07-07 14:08:04 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2025-07-07 14:08:04 [main] INFO  c.i.caas.robotdatahub.RobotDataHubApplicationTests - Started RobotDataHubApplicationTests in 2.488 seconds (process running for 2.89)
+2025-07-07 14:08:05 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 14:08:05 [SpringApplicationShutdownHook] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 0 subscriber(s).
+2025-07-07 14:08:05 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2025-07-07 14:08:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-07 14:08:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-07 14:08:06 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - Starting RobotDataHubApplication using Java 23.0.2 with PID 63514 (/Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub/target/classes started by shunwang in /Users/shunwang/Desktop/都市农业研究所/机器人数据传输/robotDataHub)
+2025-07-07 14:08:06 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-07 14:08:06 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-07-07 14:08:06 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-07-07 14:08:06 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-07 14:08:06 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-07 14:08:06 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-07 14:08:06 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-07 14:08:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 400 ms
+2025-07-07 14:08:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-07 14:08:06 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f38f084
+2025-07-07 14:08:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-07 14:08:07 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 14:08:07 [main] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 1 subscriber(s).
+2025-07-07 14:08:07 [main] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2025-07-07 14:08:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-07 14:08:07 [main] INFO  cn.iua.caas.robotdatahub.RobotDataHubApplication - Started RobotDataHubApplication in 1.0 seconds (process running for 1.202)
+2025-07-07 14:08:11 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-07 14:08:11 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-07 14:08:11 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-07-07 14:26:33 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-07 14:26:33 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-07 14:26:33 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-07 14:26:33 [SpringApplicationShutdownHook] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'robotDataHub.errorChannel' has 0 subscriber(s).
+2025-07-07 14:26:33 [SpringApplicationShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2025-07-07 14:26:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-07 14:26:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

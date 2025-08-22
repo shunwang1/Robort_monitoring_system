@@ -1,0 +1,34 @@
+{
+  "deviceId": "SMS-L-001",
+  "deviceIEMI": "IMEI1234567893",
+  "deviceType": "01",
+  "recordTimestamp": "2025-06-19T10:15:30",
+  "organizationCode": "01",
+  "speed": 5.75,
+  "seedingArea": 12.50,
+  "createdAt": "2025-07-01T09:20:00",
+  "onDuty": true,
+  "location":{
+    "longitude": 104.0149232,
+    "latitude": 30.2779132
+  },
+  "sensorDatas": [
+    {
+      "name": "肥箱传感器",
+      "value": 78.5
+    },
+    {
+      "name": "种箱传感器",
+      "value": 65.2
+    },
+    {
+      "name": "气流传感器",
+      "value": 90.1
+    },
+    {
+      "name": "传感器一号",
+      "value": 20.2
+    }
+  ]
+}
+###END###

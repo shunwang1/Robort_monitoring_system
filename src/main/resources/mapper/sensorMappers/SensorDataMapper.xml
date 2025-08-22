@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.iua.caas.robotdatahub.mapper.sensorMappers.SensorDataMapper">
+
+    <insert id="insertSensorData">
+        INSERT INTO seeding_robot_sensor_data (robot_id, name, value)
+        VALUES
+        <foreach collection="sensorDatas" item="sensor" separator=",">
+            (#{sensor.robotId}, #{sensor.name}, #{sensor.value})
+        </foreach>
+    </insert>
+
+</mapper>

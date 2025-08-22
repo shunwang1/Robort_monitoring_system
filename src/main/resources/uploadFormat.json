@@ -1,0 +1,44 @@
+{
+  "account": "xxx",
+  "password": "xxx",
+  "factoryId": "xxx",
+  "infoGuid": "xxx",
+  "deviceId": "HDKJ_1234567",
+  "plate": "123",
+  "venderName": "雷沃X1024",
+  "chassis": "453s",
+  "engine": "567445",
+  "horsepower": 1024,
+  "ownerName": "张三",
+  "ownerPhone": "李四",
+  "typeClass": 1,
+  "deptId": 1,
+  "regionCode": "150000",
+  "townsName": "测试镇",
+  "coopName": "测试合作社"
+}
+
+{
+  "account": "xxx",
+  "password": "xxx",
+  "factoryId": "xxx",
+  "infoGuid": "xxx",
+  "deviceId": "HDKJ_1234567",
+  "workDate": "2022-11-11",
+  "traceNum": 0,
+  "t": [
+    {
+      "t1": "123.45",       // 经度
+      "t2": "46.57",        // 纬度
+      "t3": "2023-01-01 13:10:15", // 定位时间
+      "t4": "1",            // 作业类型（见附表2）
+      "t5": "30",           // 作业深度 cm
+      "t6": "150",          // 方向 0-360
+      "t7": "8",            // 速度 km/h
+      "t8": "10000",        // 幅宽 cm
+      "t9": "1",            // 是否作业点（1 是，0 否）
+      "t10": "http://图片路径.jpg"  // 图片可选
+    },
+    ...
+  ]
+}

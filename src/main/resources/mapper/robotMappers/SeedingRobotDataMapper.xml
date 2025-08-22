@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.iua.caas.robotdatahub.mapper.robotMappers.SeedingRobotDataMapper">
+
+    <resultMap id="robotWithSensorsAndGisMap" type="SeedingRobot">
+        <id property="id" column="id"/> <!-- 必须加上 -->
+        <result property="deviceId" column="device_id" />
+        <result property="deviceIEMI" column="device_iemi" />
+        <result property="deviceType" column="device_type" />
+        <result property="recordTimestamp" column="record_timestamp" />
+        <result property="organizationCode" column="organization_code" />
+        <result property="speed" column="speed" />
+        <result property="ownerName" column="owner_name" />
+        <result property="ownerPhone" column="owner_number" />
+        <result property="seedingArea" column="seeding_area" />
+        <result property="onDuty" column="on_duty" />
+
+        <association property="location" javaType="Location">
+            <id property="id" column="id"/>
+            <result property="deviceIMEI" column="imei"/>
+            <result property="latitude" column="latitude"/>
+            <result property="longitude" column="longitude"/>
+            <result property="provinceName" column="province"/>
+            <result property="cityName" column="city"/>
+            <result property="districtName" column="district"/>
+            <result property="townShipName" column="township"/>
+            <result property="fullAddress" column="full_address"/>
+            <result property="updatedTime" column="update_time"/>
+        </association>
+
+        <collection property="sensorDatas" ofType="SensorData">
+            <result property="robotId" column="robot_id"/>
+            <result property="name" column="name"/>
+            <result property="value" column="value"/>
+        </collection>
+    </resultMap>
+
+    <!-- 联表查询 -->
+    <select id="getRobotByIEMI" resultMap="robotWithSensorsAndGisMap">
+        SELECT
+            r.id, r.device_id, r.device_iemi, r.device_type, r.record_timestamp,
+            r.organization_code, r.speed, r.seeding_area,
+            r.created_at, r.on_duty,
+            s.robot_id, s.name, s.value,
+            o.owner_name,o.owner_number,
+            g.longitude, g.latitude, g.province, g.city,
+            g.district, g.township, g.full_address, g.update_time
+        FROM seeding_robot_general_data r
+                 LEFT JOIN seeding_robot_sensor_data s ON r.id = s.robot_id
+                 LEFT JOIN latest_geo_location_info g ON r.device_iemi = g.imei
+                 LEFT JOIN seeding_robot_user_info o ON r.device_iemi = o.device_imei
+        WHERE r.device_iemi = #{robotIEMI}
+        ORDER BY r.record_timestamp DESC
+    </select>
+
+    <select id="getLatestRobotDataByIEMI" resultMap="robotWithSensorsAndGisMap">
+        SELECT
+            r.id,r.device_id, r.device_iemi, r.device_type, r.record_timestamp,
+            r.organization_code, r.speed, r.seeding_area,
+            r.created_at, r.on_duty,
+            s.robot_id, s.name, s.value,
+            o.owner_name,o.owner_number,
+            g.longitude, g.latitude, g.province, g.city,
+            g.district, g.township, g.full_address, g.update_time
+        FROM (
+                 SELECT *
+                 FROM seeding_robot_general_data
+                 WHERE device_iemi = #{robotIEMI}
+                 ORDER BY record_timestamp DESC
+                     LIMIT 1
+             ) r
+                 LEFT JOIN seeding_robot_sensor_data s ON r.id = s.robot_id
+                 LEFT JOIN latest_geo_location_info g ON r.device_iemi = g.imei
+                 LEFT JOIN seeding_robot_user_info o ON r.device_iemi = o.device_imei
+        ORDER BY r.record_timestamp DESC
+    </select>
+
+    <select id="getAllLatestRobotsData" resultMap="robotWithSensorsAndGisMap">
+        SELECT
+            r.id, r.device_id,r.device_iemi, r.device_type, r.record_timestamp,
+            r.organization_code, r.speed, r.seeding_area,
+            r.created_at,r.on_duty,
+            s.robot_id, s.name, s.value,
+            o.owner_name,o.owner_number,
+            g.longitude, g.latitude, g.province, g.city,
+            g.district, g.township, g.full_address, g.update_time
+        FROM (
+                 SELECT *,
+                        ROW_NUMBER() OVER (PARTITION BY device_iemi ORDER BY record_timestamp DESC) AS rn
+                 FROM seeding_robot_general_data
+             ) r
+                 LEFT JOIN seeding_robot_sensor_data s ON r.id = s.robot_id
+                 LEFT JOIN latest_geo_location_info g ON r.device_iemi = g.imei
+                 LEFT JOIN seeding_robot_user_info o ON r.device_iemi = o.device_imei
+        WHERE r.rn = 1
+    </select>
+
+    <select id="fetch20DatasetByImei" resultMap="robotWithSensorsAndGisMap">
+        SELECT
+            r.id, r.device_id, r.device_iemi, r.device_type, r.record_timestamp,
+            r.organization_code, r.speed, r.seeding_area,
+            r.created_at, r.on_duty,
+            s.robot_id, s.name, s.value,
+            o.owner_name,o.owner_number,
+            g.longitude, g.latitude, g.province, g.city,
+            g.district, g.township, g.full_address, g.update_time
+        FROM (
+                 SELECT *
+                 FROM seeding_robot_general_data
+                 WHERE device_iemi = #{imei}
+                 ORDER BY record_timestamp DESC
+                     LIMIT 20
+             ) r
+                 LEFT JOIN seeding_robot_sensor_data s ON r.id = s.robot_id
+                 LEFT JOIN latest_geo_location_info g ON r.device_iemi = g.imei
+                 LEFT JOIN seeding_robot_user_info o ON r.device_iemi = o.device_imei
+        ORDER BY r.record_timestamp DESC
+    </select>
+
+    <select id="getPagedLatestRobotsData" resultMap="robotWithSensorsAndGisMap">
+        SELECT
+            r.id, r.device_id, r.device_iemi, r.device_type, r.record_timestamp,
+            r.organization_code, r.speed, r.seeding_area,
+            r.created_at, r.on_duty,
+            s.robot_id, s.name, s.value,
+            o.owner_name,o.owner_number,
+            g.longitude, g.latitude, g.province, g.city,
+            g.district, g.township, g.full_address, g.update_time
+        FROM (
+                 -- 第一步：先分页每个设备最新数据
+                 SELECT *
+                 FROM (
+                          SELECT *,
+                                 ROW_NUMBER() OVER (PARTITION BY device_iemi ORDER BY record_timestamp DESC) AS rn
+                          FROM seeding_robot_general_data
+                      ) AS ranked
+                 WHERE ranked.rn = 1
+                 ORDER BY record_timestamp DESC
+                     LIMIT #{limit} OFFSET #{offset}
+             ) AS r
+                 LEFT JOIN seeding_robot_sensor_data s ON r.id = s.robot_id
+                 LEFT JOIN latest_geo_location_info g ON r.device_iemi = g.imei
+                 LEFT JOIN seeding_robot_user_info o ON r.device_iemi = o.device_imei
+    </select>
+
+    <select id="countLatestRobotsData" resultType="int">
+        SELECT COUNT(*) FROM (
+                                 SELECT device_iemi
+                                 FROM seeding_robot_general_data
+                                 GROUP BY device_iemi
+                             ) t
+    </select>
+
+    <select id="getFilteredPagedLatestRobotsData" resultMap="robotWithSensorsAndGisMap">
+        SELECT
+        paged_data.id,
+        paged_data.device_id,
+        paged_data.device_iemi,
+        paged_data.device_type,
+        paged_data.record_timestamp,
+        paged_data.organization_code,
+        paged_data.speed,
+        paged_data.seeding_area,
+        paged_data.on_duty,
+        paged_data.imei,
+        paged_data.longitude,
+        paged_data.latitude,
+        paged_data.province,
+        paged_data.city,
+        paged_data.district,
+        paged_data.township,
+        paged_data.full_address,
+        paged_data.update_time,
+        sensor.robot_id,
+        sensor.name,
+        sensor.value,
+        user_info.owner_name,
+        user_info.owner_number
+        FROM (
+        SELECT
+        latest_data.id,
+        latest_data.device_id,
+        latest_data.device_iemi,
+        latest_data.device_type,
+        latest_data.record_timestamp,
+        latest_data.organization_code,
+        latest_data.speed,
+        latest_data.seeding_area,
+        latest_data.on_duty,
+        latest_data.imei,
+        latest_data.longitude,
+        latest_data.latitude,
+        latest_data.province,
+        latest_data.city,
+        latest_data.district,
+        latest_data.township,
+        latest_data.full_address,
+        latest_data.update_time
+        FROM (
+        SELECT
+        s.id,
+        s.device_id,
+        s.device_iemi,
+        s.device_type,
+        s.record_timestamp,
+        s.organization_code,
+        s.speed,
+        s.seeding_area,
+        s.on_duty,
+        g.imei,
+        g.longitude,
+        g.latitude,
+        g.province,
+        g.city,
+        g.district,
+        g.township,
+        g.full_address,
+        g.update_time,
+        ROW_NUMBER() OVER (PARTITION BY s.device_iemi ORDER BY s.record_timestamp DESC) as rn
+        FROM seeding_robot_general_data s
+        INNER JOIN latest_geo_location_info g ON s.device_iemi = g.imei
+        ) latest_data
+        WHERE latest_data.rn = 1
+        <if test="city != null and city != ''">
+            AND latest_data.city = #{city}
+        </if>
+        <if test="status != null">
+            AND latest_data.on_duty = #{status}
+        </if>
+        ORDER BY latest_data.record_timestamp DESC
+        LIMIT #{limit} OFFSET #{offset}
+        ) paged_data
+        LEFT JOIN seeding_robot_sensor_data sensor ON paged_data.id = sensor.robot_id
+        LEFT JOIN seeding_robot_user_info user_info ON paged_data.device_iemi = user_info.device_imei
+        ORDER BY paged_data.record_timestamp DESC, sensor.name
+    </select>
+
+    <select id="countLatestFilteredRobotsData" resultType="int">
+        SELECT COUNT(*)
+        FROM seeding_robot_general_data s
+        INNER JOIN latest_geo_location_info g ON s.device_iemi = g.imei
+        INNER JOIN (
+        SELECT
+        device_iemi,
+        MAX(record_timestamp) AS latest_timestamp
+        FROM seeding_robot_general_data
+        GROUP BY device_iemi
+        ) latest ON s.device_iemi = latest.device_iemi
+        AND s.record_timestamp = latest.latest_timestamp
+        <where>
+            <if test="city != null and city != ''">
+                AND g.city = #{city}
+            </if>
+            <if test="status != null">
+                AND s.on_duty = #{status}
+            </if>
+        </where>
+    </select>
+
+
+
+</mapper>
